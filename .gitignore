@@ -1,0 +1,75 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+venv312/
+
+.venv/
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Django
+db.sqlite3
+db.sqlite3-journal
+staticfiles/
+media/
+*.cache
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+secrets.json
+credentials.json
+
+# Chatbot / RAG
+chroma_db/
+chroma/
+vectorstore/
+vector_store/
+*.faiss
+*.index
+embeddings/
+processed_documents/
+processed_docs/
+documents/
+uploads/
+tmp/
+temp/
+cache/
+
+# Logs
+*.log
+logs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

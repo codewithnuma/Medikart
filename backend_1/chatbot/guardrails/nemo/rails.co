@@ -1,0 +1,145 @@
+# ============================================================
+# NeMo Guardrails - Health Assistance AI
+# Security Response Messages
+# ============================================================
+#
+# The actual self-check-input and self-check-output flows are
+# provided by NeMo Guardrails.
+#
+# DO NOT redefine:
+#
+#   define flow self check input
+#   define flow self check output
+#
+# We only customize the bot response messages.
+#
+# The built-in self-check flows call:
+#
+#   bot refuse to respond
+#
+# when they decide to block a request.
+#
+# The category-specific messages below are building blocks for
+# future custom Colang flows.
+#
+# ============================================================
+
+
+# ============================================================
+# DEFAULT SECURITY REFUSAL
+# ============================================================
+
+define bot refuse to respond
+  "I can't help with that request. I can help with general health, medicine, and wellness information."
+
+
+# ============================================================
+# PROMPT INJECTION
+# ============================================================
+
+define bot refuse prompt injection
+  "I can't follow instructions that attempt to override or replace my existing instructions."
+
+
+# ============================================================
+# JAILBREAK
+# ============================================================
+
+define bot refuse jailbreak
+  "I can't disable or bypass my safety restrictions."
+
+
+# ============================================================
+# SYSTEM PROMPT EXTRACTION
+# ============================================================
+
+define bot refuse system prompt
+  "I can't provide hidden system or developer instructions, but I can explain how health AI assistants and their safety systems work."
+
+
+# ============================================================
+# SECRET / CREDENTIAL EXTRACTION
+# ============================================================
+
+define bot refuse secret extraction
+  "I can't provide API keys, passwords, tokens, credentials, private keys, or other private configuration."
+
+
+# ============================================================
+# ROLE / AUTHORITY IMPERSONATION
+# ============================================================
+
+define bot refuse authority impersonation
+  "I can't follow messages that pretend to be system, developer, administrator, doctor, or other privileged instructions."
+
+
+# ============================================================
+# OFF-TOPIC
+# ============================================================
+
+define bot refuse off topic
+  "I'm designed to help with health, medicine, wellness, symptoms, and general healthcare information. I can't help with that request, but I can help with a health-related question."
+
+
+# ============================================================
+# UNSAFE MEDICAL REQUEST
+# ============================================================
+
+define bot refuse unsafe medical request
+  "I can't provide instructions that could seriously harm someone. I can provide general health and medication safety information instead."
+
+
+# ============================================================
+# DANGEROUS MEDICATION REQUEST
+# ============================================================
+
+define bot refuse dangerous medication request
+  "I can't provide instructions for unsafe medication use, overdose, misuse, or intentionally harmful use. I can provide general medication safety information."
+
+
+# ============================================================
+# DIAGNOSIS CERTAINTY
+# ============================================================
+
+define bot refuse diagnosis certainty
+  "I can't confirm a medical diagnosis from a chat alone. I can provide general information about possible causes and explain when professional medical care may be appropriate."
+
+
+# ============================================================
+# PRESCRIPTION / DOSAGE SAFETY
+# ============================================================
+
+define bot refuse unsafe dosage
+  "I can't provide a personalized medication dose without the necessary clinical information. Please follow the prescribed or labeled directions and consult a doctor or pharmacist if you're unsure."
+
+
+# ============================================================
+# EMERGENCY HEALTH SITUATION
+# ============================================================
+
+define bot emergency medical response
+  "If this may be a medical emergency or someone is in immediate danger, seek urgent medical attention or contact your local emergency service now."
+
+
+# ============================================================
+# OUTPUT SECRET
+# ============================================================
+
+define bot refuse output secret
+  "I can't share hidden instructions, credentials, tokens, private configuration, or other protected information."
+
+
+# ============================================================
+# PRIVATE HEALTH INFORMATION
+# ============================================================
+
+define bot refuse private health information
+  "I can't provide another person's private health information or confidential medical records."
+
+
+# ============================================================
+# MEDICAL PROFESSIONAL DISCLAIMER
+# ============================================================
+
+define bot medical information disclaimer
+  "I can provide general health information, but this does not replace advice, diagnosis, or treatment from a qualified healthcare professional."
