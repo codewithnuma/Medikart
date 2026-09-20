@@ -1,0 +1,506 @@
+.edit-medicine-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  color: #1d1d1f;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+.edit-medicine-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-bottom: 20px;
+
+  color: #5f6368;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.edit-medicine-back:hover {
+  color: #0071e3;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.edit-medicine-header {
+  margin-bottom: 22px;
+}
+
+.edit-medicine-kicker {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #0071e3;
+
+  font-size: 9px;
+  font-weight: 750;
+
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+.edit-medicine-header h1 {
+  margin: 0 0 6px;
+
+  font-size:
+    clamp(28px, 4vw, 39px);
+
+  font-weight: 740;
+
+  letter-spacing: -1.3px;
+}
+
+.edit-medicine-header p {
+  margin: 0;
+
+  color: #818188;
+
+  font-size: 11px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.edit-medicine-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.edit-medicine-panel {
+  padding: 20px;
+
+  border: 1px solid #e7e9ec;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 3px 14px
+    rgba(30, 42, 55, 0.025);
+}
+
+.edit-medicine-panel-header {
+  margin-bottom: 18px;
+}
+
+.edit-medicine-panel-header h2 {
+  margin: 0 0 4px;
+
+  color: #29292e;
+
+  font-size: 15px;
+  font-weight: 680;
+}
+
+.edit-medicine-panel-header p {
+  margin: 0;
+
+  color: #929299;
+
+  font-size: 11px;
+}
+
+/* =========================
+   FIELDS
+========================= */
+
+.edit-medicine-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+.edit-medicine-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.edit-medicine-field-full {
+  grid-column: 1 / -1;
+}
+
+.edit-medicine-field > span {
+  color: #55555b;
+
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.edit-medicine-field input,
+.edit-medicine-field textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 0 12px;
+
+  border: 1px solid #dfe2e6;
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #2d2d32;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.edit-medicine-field input {
+  height: 44px;
+}
+
+.edit-medicine-field textarea {
+  padding-top: 11px;
+  padding-bottom: 11px;
+
+  resize: vertical;
+}
+
+.edit-medicine-field input:focus,
+.edit-medicine-field textarea:focus {
+  border-color:
+    rgba(0, 113, 227, 0.45);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(0, 113, 227, 0.08);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.edit-medicine-upload {
+  min-height: 190px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  border: 1px dashed #cfd6dd;
+  border-radius: 14px;
+
+  background: #fafbfd;
+
+  cursor: pointer;
+
+  text-align: center;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.edit-medicine-upload:hover {
+  transform: translateY(-2px);
+
+  border-color:
+    rgba(0, 113, 227, 0.45);
+
+  background: #f5faff;
+}
+
+.edit-medicine-upload > div {
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 12px;
+
+  border-radius: 13px;
+
+  color: #0071e3;
+
+  background: #eaf4ff;
+}
+
+.edit-medicine-upload strong {
+  margin-bottom: 5px;
+
+  color: #333338;
+
+  font-size: 13px;
+}
+
+.edit-medicine-upload span {
+  color: #8b8b92;
+
+  font-size: 10px;
+}
+
+.edit-medicine-preview {
+  overflow: hidden;
+
+  border: 1px solid #e1e4e8;
+  border-radius: 14px;
+
+  background: #f8f9fa;
+}
+
+.edit-medicine-preview img {
+  width: 100%;
+  max-height: 420px;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+.edit-medicine-preview-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  padding: 13px 15px;
+
+  background: #ffffff;
+}
+
+.edit-medicine-preview-footer > div {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #66666d;
+
+  font-size: 10px;
+}
+
+.edit-medicine-preview-footer span {
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+.edit-medicine-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  min-height: 34px;
+
+  padding: 0 10px;
+
+  border: 1px solid #ffd7d2;
+  border-radius: 9px;
+
+  background: #fff5f4;
+
+  color: #b42318;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.edit-medicine-remove:hover {
+  background: #ffebe9;
+}
+
+/* =========================
+   MESSAGES
+========================= */
+
+.edit-medicine-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 14px;
+
+  border-radius: 10px;
+
+  font-size: 11px;
+}
+
+.edit-medicine-message.error {
+  border: 1px solid #ffd7d2;
+
+  background: #fff3f2;
+
+  color: #b42318;
+}
+
+.edit-medicine-message.success {
+  border: 1px solid #cae9dc;
+
+  background: #eefaf4;
+
+  color: #067647;
+}
+
+/* =========================
+   ACTIONS
+========================= */
+
+.edit-medicine-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.edit-medicine-cancel,
+.edit-medicine-save {
+  min-height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  padding: 0 14px;
+
+  border-radius: 9px;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 650;
+
+  text-decoration: none;
+}
+
+.edit-medicine-cancel {
+  border: 1px solid #dfe2e6;
+
+  background: #ffffff;
+
+  color: #55555b;
+}
+
+.edit-medicine-cancel:hover {
+  background: #f5f6f7;
+}
+
+.edit-medicine-save {
+  border: 1px solid #0071e3;
+
+  background: #0071e3;
+
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.edit-medicine-save:hover {
+  background: #0065cc;
+}
+
+.edit-medicine-save:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+/* =========================
+   LOADING
+========================= */
+
+.edit-medicine-loading {
+  min-height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+
+  color: #74747b;
+
+  font-size: 13px;
+}
+
+.edit-medicine-spinner {
+  color: #0071e3;
+
+  animation:
+    editMedicineSpin
+    0.9s linear infinite;
+}
+
+@keyframes editMedicineSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 760px) {
+  .edit-medicine-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .edit-medicine-field-full {
+    grid-column: auto;
+  }
+
+  .edit-medicine-preview-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .edit-medicine-actions {
+    flex-direction: column-reverse;
+  }
+
+  .edit-medicine-cancel,
+  .edit-medicine-save {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .edit-medicine-upload,
+  .edit-medicine-remove,
+  .edit-medicine-save {
+    transition: none;
+  }
+
+  .edit-medicine-spinner {
+    animation: none;
+  }
+}

@@ -1,0 +1,535 @@
+.report-capture-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  color: #1d1d1f;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.report-capture-header {
+  margin-bottom: 24px;
+}
+
+.report-capture-kicker {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #0071e3;
+
+  font-size: 10px;
+  font-weight: 750;
+
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.report-capture-header h1 {
+  margin: 0 0 7px;
+
+  font-size: clamp(28px, 4vw, 39px);
+  font-weight: 740;
+
+  letter-spacing: -1.3px;
+}
+
+.report-capture-header p {
+  margin: 0;
+
+  color: #818188;
+
+  font-size: 13px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.report-capture-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.report-capture-panel {
+  padding: 20px;
+
+  border: 1px solid #e7e9ec;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 3px 14px
+    rgba(30, 42, 55, 0.025);
+}
+
+.report-capture-panel-header {
+  margin-bottom: 18px;
+}
+
+.report-capture-panel-header h2 {
+  margin: 0 0 4px;
+
+  color: #29292e;
+
+  font-size: 15px;
+  font-weight: 680;
+}
+
+.report-capture-panel-header p {
+  margin: 0;
+
+  color: #929299;
+
+  font-size: 11px;
+}
+
+/* =========================
+   FIELDS
+========================= */
+
+.report-form-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+.report-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.report-field > span {
+  color: #55555b;
+
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.report-field input {
+  width: 100%;
+  height: 44px;
+
+  box-sizing: border-box;
+
+  padding: 0 12px;
+
+  border: 1px solid #dfe2e6;
+  border-radius: 10px;
+  outline: none;
+
+  background: #ffffff;
+
+  color: #2d2d32;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.report-field input:focus {
+  border-color:
+    rgba(0, 113, 227, 0.45);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(0, 113, 227, 0.08);
+}
+
+/* =========================
+   SOURCE OPTIONS
+========================= */
+
+.report-source-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+.report-source-card {
+  min-height: 175px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  border: 1px dashed #cfd6dd;
+  border-radius: 14px;
+
+  background: #fafbfd;
+
+  cursor: pointer;
+
+  text-align: center;
+
+  font-family: inherit;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.report-source-card:hover {
+  transform: translateY(-2px);
+
+  border-color:
+    rgba(0, 113, 227, 0.45);
+
+  background: #f5faff;
+}
+
+.report-source-card > div {
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 12px;
+
+  border-radius: 13px;
+
+  color: #0071e3;
+
+  background: #eaf4ff;
+}
+
+.report-source-card strong {
+  margin-bottom: 5px;
+
+  color: #333338;
+
+  font-size: 13px;
+}
+
+.report-source-card span {
+  max-width: 240px;
+
+  color: #8b8b92;
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+/* =========================
+   CAMERA
+========================= */
+
+.report-camera-container {
+  overflow: hidden;
+
+  border: 1px solid #e1e4e8;
+  border-radius: 14px;
+
+  background: #111111;
+}
+
+.report-webcam {
+  width: 100%;
+  max-height: 520px;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+.report-camera-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 14px;
+
+  background: #ffffff;
+}
+
+/* =========================
+   PREVIEW
+========================= */
+
+.report-preview-container {
+  overflow: hidden;
+
+  border: 1px solid #e1e4e8;
+  border-radius: 14px;
+
+  background: #f8f9fa;
+}
+
+.report-preview-image {
+  width: 100%;
+  max-height: 520px;
+
+  display: block;
+
+  object-fit: contain;
+
+  background: #f3f5f7;
+}
+
+.report-preview-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  padding: 13px 15px;
+
+  background: #ffffff;
+}
+
+.report-preview-info > div {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #66666d;
+
+  font-size: 10px;
+}
+
+.report-preview-info > div span {
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.report-primary-button,
+.report-secondary-button,
+.report-remove-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  border-radius: 9px;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 650;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.report-primary-button {
+  min-height: 40px;
+
+  padding: 0 14px;
+
+  border: 1px solid #0071e3;
+
+  background: #0071e3;
+
+  color: #ffffff;
+}
+
+.report-primary-button:hover {
+  background: #0065cc;
+}
+
+.report-secondary-button {
+  min-height: 40px;
+
+  padding: 0 14px;
+
+  border: 1px solid #dfe2e6;
+
+  background: #ffffff;
+
+  color: #55555b;
+}
+
+.report-secondary-button:hover {
+  background: #f5f6f7;
+}
+
+.report-remove-button {
+  min-height: 34px;
+
+  padding: 0 10px;
+
+  border: 1px solid #ffd7d2;
+
+  background: #fff5f4;
+
+  color: #b42318;
+}
+
+.report-remove-button:hover {
+  background: #ffebe9;
+}
+
+.report-primary-button:disabled,
+.report-secondary-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+/* =========================
+   MESSAGES
+========================= */
+
+.report-capture-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 14px;
+
+  border-radius: 10px;
+
+  font-size: 11px;
+}
+
+.report-capture-message.error {
+  border: 1px solid #ffd7d2;
+
+  background: #fff3f2;
+
+  color: #b42318;
+}
+
+.report-capture-message.success {
+  border: 1px solid #cae9dc;
+
+  background: #eefaf4;
+
+  color: #067647;
+}
+
+/* =========================
+   FORM ACTIONS
+========================= */
+
+.report-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  padding-top: 2px;
+}
+
+/* =========================
+   SPINNER
+========================= */
+
+.report-button-spinner {
+  animation:
+    reportButtonSpin 0.9s
+    linear infinite;
+}
+
+@keyframes reportButtonSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 760px) {
+  .report-form-grid,
+  .report-source-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .report-preview-info {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .report-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .report-form-actions button {
+    width: 100%;
+  }
+
+  .report-camera-actions {
+    flex-direction: column;
+  }
+
+  .report-camera-actions button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .report-source-card,
+  .report-primary-button,
+  .report-secondary-button,
+  .report-remove-button {
+    transition: none;
+  }
+
+  .report-button-spinner {
+    animation: none;
+  }
+}
+
+.report-capture-back {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 18px;
+
+  color: #5f6368;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.report-capture-back:hover {
+  color: #0071e3;
+
+  transform: translateX(-2px);
+}

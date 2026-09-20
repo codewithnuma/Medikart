@@ -1,0 +1,513 @@
+.patient-orders-page {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+
+  color: #1d1d1f;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.orders-page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+
+  margin-bottom: 24px;
+}
+
+.orders-kicker {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #0071e3;
+
+  font-size: 10px;
+  font-weight: 750;
+
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.orders-page-header h1 {
+  margin: 0 0 7px;
+
+  font-size: clamp(28px, 4vw, 39px);
+  font-weight: 740;
+
+  letter-spacing: -1.3px;
+}
+
+.orders-page-header p {
+  margin: 0;
+
+  color: #818188;
+
+  font-size: 13px;
+}
+
+.orders-refresh-button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 9px 13px;
+
+  border: 1px solid #e2e5e9;
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #53535a;
+
+  cursor: pointer;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.orders-refresh-button:hover {
+  color: #0071e3;
+
+  border-color:
+    rgba(0, 113, 227, 0.25);
+
+  background: #f8fbff;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.orders-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  max-width: 620px;
+
+  margin-bottom: 18px;
+
+  padding: 0 14px;
+
+  border: 1px solid #e1e4e8;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  color: #929299;
+}
+
+.orders-search-bar:focus-within {
+  border-color:
+    rgba(0, 113, 227, 0.4);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(0, 113, 227, 0.08);
+}
+
+.orders-search-bar input {
+  width: 100%;
+  height: 45px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #2c2c31;
+
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.orders-search-bar input::placeholder {
+  color: #aaaab0;
+}
+
+/* =========================
+   RESULT COUNT
+========================= */
+
+.orders-result-row {
+  margin-bottom: 13px;
+
+  color: #8a8a91;
+
+  font-size: 11px;
+  font-weight: 550;
+}
+
+/* =========================
+   ORDER LIST
+========================= */
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.order-card {
+  padding: 20px;
+
+  border: 1px solid #e7e9ec;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 3px 14px
+    rgba(30, 42, 55, 0.025);
+}
+
+.order-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+
+  padding-bottom: 16px;
+
+  border-bottom: 1px solid #f0f1f2;
+}
+
+.order-number {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #96969c;
+
+  font-size: 9px;
+  font-weight: 650;
+
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.order-card h2 {
+  margin: 0 0 4px;
+
+  color: #29292e;
+
+  font-size: 16px;
+  font-weight: 680;
+}
+
+.order-pharmacy {
+  color: #8b8b91;
+
+  font-size: 10px;
+}
+
+/* =========================
+   ORDER STATUS
+========================= */
+
+.order-status {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 7px 10px;
+
+  border-radius: 999px;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  text-transform: capitalize;
+}
+
+.order-status.pending {
+  color: #b54708;
+  background: #fff4e5;
+}
+
+.order-status.approved {
+  color: #067647;
+  background: #e9f8f0;
+}
+
+.order-status.denied {
+  color: #b42318;
+  background: #fff0ef;
+}
+
+.order-status.delivered {
+  color: #175cd3;
+  background: #eef4ff;
+}
+
+/* =========================
+   ORDER DETAILS
+========================= */
+
+.order-details-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 12px;
+
+  padding-top: 16px;
+}
+
+.order-details-grid > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  background: #f8f9fa;
+}
+
+.order-details-grid span,
+.order-delivery > span {
+  color: #96969c;
+
+  font-size: 9px;
+}
+
+.order-details-grid strong,
+.order-delivery > strong {
+  color: #44444a;
+
+  font-size: 11px;
+  font-weight: 620;
+}
+
+/* =========================
+   DENIAL / DELIVERY
+========================= */
+
+.order-denial {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  margin-top: 14px;
+
+  padding: 12px;
+
+  border: 1px solid #ffd7d2;
+  border-radius: 10px;
+
+  background: #fff5f4;
+}
+
+.order-denial strong {
+  color: #b42318;
+
+  font-size: 10px;
+}
+
+.order-denial span {
+  color: #8d4a45;
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.order-delivery {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  margin-top: 14px;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  background: #f6f9fc;
+}
+
+/* =========================
+   LOADING
+========================= */
+
+.orders-loading {
+  min-height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+
+  color: #74747b;
+
+  font-size: 13px;
+}
+
+.orders-spinner {
+  color: #0071e3;
+
+  animation:
+    ordersSpin 0.9s
+    linear infinite;
+}
+
+@keyframes ordersSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.orders-error {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 18px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #ffd7d2;
+  border-radius: 10px;
+
+  background: #fff3f2;
+
+  color: #b42318;
+
+  font-size: 11px;
+}
+
+/* =========================
+   EMPTY
+========================= */
+
+.orders-empty {
+  min-height: 360px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px dashed #dfe2e6;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  text-align: center;
+}
+
+.orders-empty svg {
+  margin-bottom: 12px;
+
+  color: #b4b7bc;
+}
+
+.orders-empty strong {
+  margin-bottom: 5px;
+
+  color: #55555b;
+
+  font-size: 13px;
+}
+
+.orders-empty span {
+  color: #9a9aa0;
+
+  font-size: 11px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 760px) {
+  .orders-page-header {
+    flex-direction: column;
+  }
+
+  .orders-search-bar {
+    max-width: none;
+  }
+
+  .order-card-top {
+    flex-direction: column;
+  }
+
+  .order-details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orders-refresh-button {
+    transition: none;
+  }
+
+  .orders-spinner {
+    animation: none;
+  }
+}
+.order-view-button {
+  width: 100%;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  margin-top: 14px;
+
+  padding: 10px 12px;
+
+  border: 1px solid #d7e8f8;
+  border-radius: 9px;
+
+  background: #f4f9ff;
+
+  color: #0071e3;
+
+  font-size: 10px;
+  font-weight: 680;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.order-view-button:hover {
+  background: #eaf4ff;
+
+  border-color: rgba(0, 113, 227, 0.3);
+
+  transform: translateY(-1px);
+}

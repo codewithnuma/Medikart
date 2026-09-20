@@ -1,0 +1,375 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  width: 248px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 22px 16px 18px;
+
+  background: #ffffff;
+  border-right: 1px solid #e8eaed;
+
+  box-sizing: border-box;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+/* =========================
+   BRAND
+========================= */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  padding: 2px 8px;
+}
+
+.logo {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 12px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      145deg,
+      #1388f4,
+      #0071e3
+    );
+
+  box-shadow:
+    0 8px 20px
+    rgba(0, 113, 227, 0.2);
+}
+
+.brandText {
+  color: #1d1d1f;
+
+  font-size: 18px;
+  font-weight: 750;
+
+  letter-spacing: -0.5px;
+}
+
+.brandText span {
+  color: #0071e3;
+}
+
+/* =========================
+   ROLE
+========================= */
+
+.roleBadge {
+  width: fit-content;
+
+  margin:
+    13px
+    8px
+    26px;
+
+  padding:
+    5px
+    9px;
+
+  border-radius: 999px;
+
+  color: #0071e3;
+
+  background:
+    rgba(0, 113, 227, 0.08);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navigation {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  overflow-y: auto;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  min-height: 44px;
+
+  padding:
+    0
+    13px;
+
+  border-radius: 11px;
+
+  color: #626269;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 550;
+
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.navItem svg {
+  flex-shrink: 0;
+}
+
+.navItem:hover {
+  color: #1d1d1f;
+
+  background: #f5f7f9;
+
+  transform: translateX(2px);
+}
+
+.navItem.active {
+  color: #0071e3;
+
+  background:
+    rgba(0, 113, 227, 0.09);
+
+  font-weight: 650;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  margin-top: auto;
+
+  padding-top: 16px;
+
+  border-top: 1px solid #eceef1;
+}
+
+.userCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding:
+    7px
+    8px
+    13px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: #24526f;
+
+  background: #eaf4fc;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.userDetails {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.userDetails strong {
+  overflow: hidden;
+
+  color: #1d1d1f;
+
+  font-size: 12px;
+  font-weight: 650;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.userDetails span {
+  color: #929299;
+
+  font-size: 10px;
+
+  text-transform: capitalize;
+}
+
+/* =========================
+   LOGOUT
+========================= */
+
+.logoutButton {
+  width: 100%;
+  min-height: 42px;
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  padding:
+    0
+    12px;
+
+  border: none;
+  border-radius: 10px;
+
+  color: #74747b;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 550;
+
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease;
+}
+
+.logoutButton:hover {
+  color: #d92d20;
+
+  background: #fff1f0;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+.navigation::-webkit-scrollbar {
+  width: 4px;
+}
+
+.navigation::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+
+  background: #d6d9dd;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 220px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .sidebar {
+    width: 72px;
+
+    padding:
+      18px
+      10px;
+  }
+
+  .brand {
+    justify-content: center;
+
+    padding: 0;
+  }
+
+  .brandText,
+  .roleBadge,
+  .navItem span,
+  .userDetails,
+  .logoutButton span {
+    display: none;
+  }
+
+  .navigation {
+    align-items: center;
+
+    margin-top: 25px;
+  }
+
+  .navItem {
+    width: 46px;
+    height: 46px;
+    min-height: 46px;
+
+    justify-content: center;
+
+    padding: 0;
+  }
+
+  .navItem:hover {
+    transform: none;
+  }
+
+  .userCard {
+    justify-content: center;
+
+    padding:
+      8px
+      0
+      13px;
+  }
+
+  .logoutButton {
+    justify-content: center;
+
+    padding: 0;
+  }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .navItem,
+  .logoutButton {
+    transition: none;
+  }
+}

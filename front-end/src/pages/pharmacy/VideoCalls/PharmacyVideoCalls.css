@@ -1,0 +1,610 @@
+.pharmacy-video-calls {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+
+  color: #1d1d1f;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.pharmacy-video-calls-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+
+  margin-bottom: 24px;
+}
+
+.pharmacy-video-calls-kicker {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #0071e3;
+
+  font-size: 10px;
+  font-weight: 750;
+
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.pharmacy-video-calls-header h1 {
+  margin: 0 0 7px;
+
+  color: #1d1d1f;
+
+  font-size: clamp(28px, 4vw, 39px);
+  font-weight: 740;
+
+  letter-spacing: -1.3px;
+}
+
+.pharmacy-video-calls-header p {
+  margin: 0;
+
+  color: #818188;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.pharmacy-video-calls-error {
+  margin-bottom: 18px;
+
+  padding: 12px 15px;
+
+  border: 1px solid #ffd7d2;
+  border-radius: 10px;
+
+  background: #fff3f2;
+
+  color: #b42318;
+
+  font-size: 12px;
+}
+
+/* =========================
+   CREATE CARD
+========================= */
+
+.pharmacy-video-create-card {
+  max-width: 760px;
+
+  margin-bottom: 28px;
+
+  padding: 20px;
+
+  border: 1px solid #e8eaed;
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 3px 13px
+    rgba(30, 42, 55, 0.025);
+}
+
+.pharmacy-video-card-header {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding-bottom: 17px;
+
+  border-bottom: 1px solid #eff0f2;
+}
+
+.pharmacy-video-card-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 12px;
+
+  color: #0071e3;
+
+  background: #edf6ff;
+}
+
+.pharmacy-video-card-header h2 {
+  margin: 0 0 4px;
+
+  color: #242428;
+
+  font-size: 15px;
+  font-weight: 680;
+}
+
+.pharmacy-video-card-header p {
+  margin: 0;
+
+  color: #929299;
+
+  font-size: 11px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.pharmacy-video-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  margin-top: 18px;
+}
+
+.pharmacy-video-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.pharmacy-video-field label {
+  color: #4f4f55;
+
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.pharmacy-video-field input,
+.pharmacy-video-field textarea {
+  width: 100%;
+
+  padding: 11px 12px;
+
+  border: 1px solid #dfe2e6;
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #1d1d1f;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  outline: none;
+
+  resize: vertical;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.pharmacy-video-field input::placeholder,
+.pharmacy-video-field textarea::placeholder {
+  color: #aaaab0;
+}
+
+.pharmacy-video-field input:focus,
+.pharmacy-video-field textarea:focus {
+  border-color: #0071e3;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(0, 113, 227, 0.08);
+}
+
+.pharmacy-video-create-button {
+  align-self: flex-start;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  padding: 10px 16px;
+
+  border: 1px solid #0071e3;
+  border-radius: 10px;
+
+  background: #0071e3;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-size: 11px;
+  font-weight: 650;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.pharmacy-video-create-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+
+  border-color: #0062c4;
+
+  background: #006bd6;
+}
+
+.pharmacy-video-create-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+/* =========================
+   MEETINGS
+========================= */
+
+.pharmacy-video-meetings-section {
+  margin-bottom: 28px;
+}
+
+.pharmacy-video-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  margin-bottom: 13px;
+}
+
+.pharmacy-video-section-header h2 {
+  margin: 0 0 3px;
+
+  color: #1d1d1f;
+
+  font-size: 15px;
+  font-weight: 680;
+}
+
+.pharmacy-video-section-header p {
+  margin: 0;
+
+  color: #929299;
+
+  font-size: 11px;
+}
+
+.pharmacy-video-meeting-count {
+  min-width: 30px;
+  height: 30px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0 9px;
+
+  border-radius: 999px;
+
+  color: #0071e3;
+
+  background: #edf6ff;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.pharmacy-video-meeting-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+.pharmacy-video-meeting-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 18px;
+
+  border: 1px solid #e8eaed;
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 3px 13px
+    rgba(30, 42, 55, 0.025);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.pharmacy-video-meeting-card:hover {
+  transform: translateY(-2px);
+
+  border-color:
+    rgba(0, 113, 227, 0.22);
+
+  box-shadow:
+    0 8px 24px
+    rgba(30, 42, 55, 0.06);
+}
+
+.pharmacy-video-meeting-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 14px;
+}
+
+.pharmacy-video-meeting-top h3 {
+  margin: 0 0 5px;
+
+  color: #242428;
+
+  font-size: 14px;
+  font-weight: 680;
+}
+
+.pharmacy-video-meeting-top p {
+  margin: 0;
+
+  color: #8b8b92;
+
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.pharmacy-video-status {
+  flex-shrink: 0;
+
+  padding: 5px 8px;
+
+  border-radius: 999px;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  text-transform: capitalize;
+}
+
+.pharmacy-video-status.active {
+  color: #067647;
+
+  background: #e9f8f0;
+}
+
+.pharmacy-video-status.ended {
+  color: #667085;
+
+  background: #f2f4f7;
+}
+
+/* =========================
+   MEETING ID
+========================= */
+
+.pharmacy-video-meeting-id {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  padding: 11px 12px;
+
+  border: 1px solid #eceef0;
+  border-radius: 10px;
+
+  background: #f8fafc;
+}
+
+.pharmacy-video-meeting-id span {
+  color: #929299;
+
+  font-size: 9px;
+  font-weight: 650;
+
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.pharmacy-video-meeting-id code {
+  overflow-wrap: anywhere;
+
+  color: #4d4d54;
+
+  font-size: 10px;
+}
+
+/* =========================
+   OPEN BUTTON
+========================= */
+
+.pharmacy-video-open-button {
+  align-self: flex-start;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 9px 13px;
+
+  border: 1px solid #e2e5e9;
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #53535a;
+
+  font-size: 11px;
+  font-weight: 650;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.pharmacy-video-open-button:hover {
+  transform: translateY(-1px);
+
+  color: #0071e3;
+
+  border-color:
+    rgba(0, 113, 227, 0.25);
+
+  background: #f8fbff;
+}
+
+/* =========================
+   EMPTY
+========================= */
+
+.pharmacy-video-empty {
+  min-height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  border: 1px solid #e8eaed;
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  text-align: center;
+}
+
+.pharmacy-video-empty svg {
+  margin-bottom: 10px;
+
+  color: #b5b7bc;
+}
+
+.pharmacy-video-empty strong {
+  margin-bottom: 4px;
+
+  color: #56565c;
+
+  font-size: 12px;
+}
+
+.pharmacy-video-empty span {
+  max-width: 280px;
+
+  color: #a1a1a7;
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .pharmacy-video-meeting-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .pharmacy-video-calls-header {
+    flex-direction: column;
+  }
+
+  .pharmacy-video-create-card {
+    max-width: none;
+  }
+
+  .pharmacy-video-create-button,
+  .pharmacy-video-open-button {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .pharmacy-video-meeting-top {
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pharmacy-video-create-button,
+  .pharmacy-video-meeting-card,
+  .pharmacy-video-open-button,
+  .pharmacy-video-field input,
+  .pharmacy-video-field textarea {
+    transition: none;
+  }
+}
+
+.pharmacy-video-meeting-id-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pharmacy-video-meeting-id-row code {
+  min-width: 0;
+  flex: 1;
+
+  overflow-wrap: anywhere;
+}
+
+.pharmacy-video-copy-button {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 6px 9px;
+
+  border: 1px solid #dfe2e6;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #53535a;
+
+  cursor: pointer;
+
+  font-size: 10px;
+  font-weight: 650;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.pharmacy-video-copy-button:hover {
+  color: #0071e3;
+
+  border-color:
+    rgba(0, 113, 227, 0.25);
+
+  background: #f8fbff;
+}

@@ -1,0 +1,324 @@
+.video-call-room {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+
+  color: #1d1d1f;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.video-call-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+
+  margin-bottom: 24px;
+}
+
+.video-call-kicker {
+  display: block;
+  margin-bottom: 8px;
+
+  color: #0071e3;
+
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.video-call-header h1 {
+  margin: 0 0 7px;
+
+  color: #1d1d1f;
+
+  font-size: clamp(28px, 4vw, 39px);
+  font-weight: 740;
+  letter-spacing: -1.3px;
+}
+
+.video-call-header p {
+  margin: 0;
+
+  color: #818188;
+  font-size: 12px;
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.video-call-error {
+  margin-bottom: 18px;
+  padding: 12px 15px;
+
+  border: 1px solid #ffd7d2;
+  border-radius: 10px;
+
+  background: #fff3f2;
+
+  color: #b42318;
+  font-size: 12px;
+}
+
+/* =========================
+   VIDEO STAGE
+========================= */
+
+.video-call-stage {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 12px;
+
+  padding: 18px;
+
+  border: 1px solid #e8eaed;
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 3px 13px
+    rgba(30, 42, 55, 0.025);
+}
+
+.video-tile {
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  min-height: 320px;
+  aspect-ratio: 16 / 9;
+
+  border-radius: 13px;
+
+  background: #111318;
+}
+
+.video-tile video {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  background: #111318;
+}
+
+.video-tile-label {
+  position: absolute;
+
+  left: 14px;
+  bottom: 14px;
+
+  padding: 6px 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+
+  background: rgba(18, 18, 22, 0.72);
+
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 650;
+
+  backdrop-filter: blur(8px);
+}
+
+/* =========================
+   CALL CONTROLS
+========================= */
+
+.call-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 16px;
+}
+
+.call-control-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  min-height: 39px;
+
+  padding: 9px 14px;
+
+  border: 1px solid #e2e5e9;
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #53535a;
+
+  cursor: pointer;
+
+  font-size: 11px;
+  font-weight: 650;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.call-control-button:hover {
+  transform: translateY(-1px);
+
+  color: #0071e3;
+
+  border-color:
+    rgba(0, 113, 227, 0.25);
+
+  background: #f8fbff;
+}
+
+.call-control-button.active {
+  color: #0071e3;
+
+  border-color:
+    rgba(0, 113, 227, 0.3);
+
+  background: #edf6ff;
+}
+
+.call-control-button.inactive {
+  color: #b42318;
+
+  border-color: #ffd7d2;
+
+  background: #fff3f2;
+}
+
+/* =========================
+   ASL PANEL
+========================= */
+
+.asl-panel {
+  margin-top: 18px;
+  padding: 18px;
+
+  border: 1px solid #d9e9f8;
+  border-radius: 15px;
+
+  background: #ffffff;
+}
+
+.asl-panel-header {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding-bottom: 14px;
+
+  border-bottom: 1px solid #eff0f2;
+
+  color: #0071e3;
+}
+
+.asl-panel-header > svg {
+  flex-shrink: 0;
+}
+
+.asl-panel-header h2 {
+  margin: 0 0 3px;
+
+  color: #1d1d1f;
+
+  font-size: 14px;
+  font-weight: 680;
+}
+
+.asl-panel-header p {
+  margin: 0;
+
+  color: #929299;
+
+  font-size: 10px;
+}
+
+.asl-transcript {
+  min-height: 72px;
+
+  display: flex;
+  align-items: center;
+
+  margin-top: 14px;
+  padding: 14px 16px;
+
+  border: 1px solid #e7e9ec;
+  border-radius: 11px;
+
+  background: #f8fafc;
+
+  color: #56565c;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+  .video-call-stage {
+    grid-template-columns: 1fr;
+  }
+
+  .video-tile {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 700px) {
+  .video-call-header {
+    flex-direction: column;
+  }
+
+  .video-call-stage {
+    padding: 10px;
+  }
+
+  .video-tile {
+    min-height: 220px;
+  }
+
+  .call-controls {
+    justify-content: stretch;
+  }
+
+  .call-control-button {
+    flex: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .call-control-button {
+    transition: none;
+  }
+}

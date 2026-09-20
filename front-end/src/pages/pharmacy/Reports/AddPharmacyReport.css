@@ -1,0 +1,238 @@
+.add-pharmacy-report-page {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+
+  color: #1d1d1f;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+/* BACK BUTTON */
+
+.add-pharmacy-report-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-bottom: 22px;
+
+  padding: 9px 12px;
+
+  border: 1px solid #e1e4e8;
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #55555b;
+
+  font-size: 11px;
+  font-weight: 620;
+
+  text-decoration: none;
+}
+
+.add-pharmacy-report-back:hover {
+  color: #0071e3;
+
+  border-color:
+    rgba(0, 113, 227, 0.25);
+
+  background: #f8fbff;
+}
+
+/* HEADER */
+
+.add-pharmacy-report-header {
+  margin-bottom: 22px;
+}
+
+.add-pharmacy-report-header > span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #0071e3;
+
+  font-size: 10px;
+  font-weight: 750;
+
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.add-pharmacy-report-header h1 {
+  margin: 0 0 7px;
+
+  font-size:
+    clamp(28px, 4vw, 39px);
+
+  font-weight: 740;
+
+  letter-spacing: -1.2px;
+}
+
+.add-pharmacy-report-header p {
+  margin: 0;
+
+  color: #818188;
+
+  font-size: 13px;
+}
+
+/* ERROR */
+
+.add-pharmacy-report-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 14px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #ffd7d2;
+  border-radius: 10px;
+
+  background: #fff3f2;
+
+  color: #b42318;
+
+  font-size: 11px;
+}
+
+/* FORM */
+
+.add-pharmacy-report-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 20px;
+
+  border: 1px solid #e7e9ec;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 3px 14px
+    rgba(30, 42, 55, 0.025);
+}
+
+.add-pharmacy-report-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.add-pharmacy-report-field label {
+  color: #55555b;
+
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.add-pharmacy-report-field input,
+.add-pharmacy-report-field select {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 11px 12px;
+
+  border: 1px solid #e1e4e8;
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #fafbfc;
+
+  color: #333338;
+
+  font-family: inherit;
+  font-size: 11px;
+}
+
+.add-pharmacy-report-field input:focus,
+.add-pharmacy-report-field select:focus {
+  border-color:
+    rgba(0, 113, 227, 0.4);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(0, 113, 227, 0.08);
+}
+
+/* FILE UPLOAD */
+
+.add-pharmacy-report-upload {
+  min-height: 90px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 14px;
+
+  border: 1px dashed #cfd6de;
+  border-radius: 12px;
+
+  background: #fafbfc;
+
+  color: #74747b;
+
+  cursor: pointer;
+}
+
+.add-pharmacy-report-upload:hover {
+  border-color:
+    rgba(0, 113, 227, 0.35);
+
+  background: #f5f9ff;
+
+  color: #0071e3;
+}
+
+/* SAVE BUTTON */
+
+.add-pharmacy-report-submit {
+  width: 100%;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 11px 14px;
+
+  border: 1px solid #0071e3;
+  border-radius: 10px;
+
+  background: #0071e3;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 680;
+}
+
+.add-pharmacy-report-submit:hover:not(:disabled) {
+  background: #0065cc;
+}
+
+.add-pharmacy-report-submit:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}

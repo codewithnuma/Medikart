@@ -1,0 +1,521 @@
+.patient-report-vault {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+
+  color: #1d1d1f;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.report-vault-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+
+  margin-bottom: 24px;
+}
+
+.report-vault-kicker {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #0071e3;
+
+  font-size: 10px;
+  font-weight: 750;
+
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.report-vault-header h1 {
+  margin: 0 0 7px;
+
+  font-size: clamp(28px, 4vw, 39px);
+  font-weight: 740;
+
+  letter-spacing: -1.3px;
+}
+
+.report-vault-header p {
+  margin: 0;
+
+  color: #818188;
+
+  font-size: 13px;
+}
+
+.report-vault-refresh {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 9px 13px;
+
+  border: 1px solid #e2e5e9;
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #53535a;
+
+  cursor: pointer;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.report-vault-refresh:hover {
+  color: #0071e3;
+
+  border-color:
+    rgba(0, 113, 227, 0.25);
+
+  background: #f8fbff;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.report-vault-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  max-width: 620px;
+
+  margin-bottom: 18px;
+
+  padding: 0 14px;
+
+  border: 1px solid #e1e4e8;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  color: #929299;
+}
+
+.report-vault-search:focus-within {
+  border-color:
+    rgba(0, 113, 227, 0.4);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(0, 113, 227, 0.08);
+}
+
+.report-vault-search input {
+  width: 100%;
+  height: 45px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #2c2c31;
+
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.report-vault-search input::placeholder {
+  color: #aaaab0;
+}
+
+/* =========================
+   COUNT
+========================= */
+
+.report-vault-count {
+  margin-bottom: 13px;
+
+  color: #8a8a91;
+
+  font-size: 11px;
+  font-weight: 550;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.report-vault-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.report-vault-card {
+  overflow: hidden;
+
+  border: 1px solid #e7e9ec;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 3px 14px
+    rgba(30, 42, 55, 0.025);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.report-vault-card:hover {
+  transform: translateY(-3px);
+
+  border-color:
+    rgba(0, 113, 227, 0.2);
+
+  box-shadow:
+    0 12px 30px
+    rgba(30, 42, 55, 0.07);
+}
+
+/* =========================
+   PREVIEW
+========================= */
+
+.report-vault-preview {
+  width: 100%;
+  height: 220px;
+
+  overflow: hidden;
+
+  background: #f5f7fa;
+}
+
+.report-vault-preview img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.report-vault-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  place-items: center;
+
+  color: #91bceb;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f5faff,
+      #edf6ff
+    );
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.report-vault-card-content {
+  padding: 17px;
+}
+
+.report-vault-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #0071e3;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+
+.report-vault-card-content h2 {
+  margin: 0 0 14px;
+
+  overflow: hidden;
+
+  color: #29292e;
+
+  font-size: 15px;
+  font-weight: 680;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* =========================
+   META
+========================= */
+
+.report-vault-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding-top: 12px;
+
+  border-top: 1px solid #f0f1f2;
+}
+
+.report-vault-meta > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.report-vault-meta span {
+  color: #96969c;
+
+  font-size: 9px;
+}
+
+.report-vault-meta strong {
+  color: #4a4a50;
+
+  font-size: 11px;
+  font-weight: 620;
+}
+
+/* =========================
+   OPEN BUTTON
+========================= */
+
+.report-vault-open {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+
+  margin-top: 16px;
+
+  padding: 7px 10px;
+
+  border-radius: 8px;
+
+  background: #edf6ff;
+
+  color: #0071e3;
+
+  font-size: 10px;
+  font-weight: 650;
+
+  text-decoration: none;
+}
+
+.report-vault-open:hover {
+  background: #e2f0ff;
+}
+
+/* =========================
+   LOADING
+========================= */
+
+.report-vault-loading {
+  min-height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+
+  color: #74747b;
+
+  font-size: 13px;
+}
+
+.report-vault-spinner {
+  color: #0071e3;
+
+  animation:
+    reportVaultSpin 0.9s
+    linear infinite;
+}
+
+@keyframes reportVaultSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.report-vault-error {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 18px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #ffd7d2;
+  border-radius: 10px;
+
+  background: #fff3f2;
+
+  color: #b42318;
+
+  font-size: 11px;
+}
+
+/* =========================
+   EMPTY
+========================= */
+
+.report-vault-empty {
+  min-height: 360px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px dashed #dfe2e6;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  text-align: center;
+}
+
+.report-vault-empty svg {
+  margin-bottom: 12px;
+
+  color: #b4b7bc;
+}
+
+.report-vault-empty strong {
+  margin-bottom: 5px;
+
+  color: #55555b;
+
+  font-size: 13px;
+}
+
+.report-vault-empty span {
+  color: #9a9aa0;
+
+  font-size: 11px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1150px) {
+  .report-vault-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .report-vault-header {
+    flex-direction: column;
+  }
+
+  .report-vault-search {
+    max-width: none;
+  }
+
+  .report-vault-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .report-vault-card,
+  .report-vault-refresh {
+    transition: none;
+  }
+
+  .report-vault-spinner {
+    animation: none;
+  }
+}
+
+.report-vault-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.report-vault-add {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 9px 13px;
+
+  border: 1px solid #0071e3;
+  border-radius: 10px;
+
+  background: #0071e3;
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 650;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.report-vault-add:hover {
+  background: #0062c4;
+  border-color: #0062c4;
+
+  transform: translateY(-1px);
+}
+
+@media (max-width: 760px) {
+  .report-vault-header-actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .report-vault-add,
+  .report-vault-refresh {
+    flex: 1;
+    justify-content: center;
+  }
+}
